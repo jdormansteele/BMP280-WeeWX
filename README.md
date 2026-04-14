@@ -5,7 +5,7 @@ Many (too many) personal weather stations take their barometric pressure measure
 
 TO DO
 
-***Acknowlegments***
+***Acknowledgements***
 
 This software is indebted to the following prior work.
 
