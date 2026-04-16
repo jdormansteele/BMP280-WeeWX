@@ -13,7 +13,7 @@ The service definition was developed and tested for a weather station with the e
 * WeeWX 5.3.1 
 
 # Connecting the BMP and enabling I2C and enabling the BMP280 hardware
-The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometric Pressure & Altitude Sensor - STEMMA QT](https://www.adafruit.com/product/2651). Adafruit supports this board with a software driver (installation described in the next section) and a tutorial. This section describes how to install the boardYou need to solder it to the [general-purpose input/output (GPIO)](https://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins/) header on the Raspberry Pi. 
+The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometric Pressure & Altitude Sensor - STEMMA QT](https://www.adafruit.com/product/2651). The software driver that Adafruit supplies to support this board will be discussed in the next section. First, you need to connect the board to the Pi's [general-purpose input/output (GPIO)](https://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins/) header, load the driver for the GPIO, and test that this physical connection is working. 
 
 The [Adafruit_CircuitPython_BMP280](https://github.com/adafruit/Adafruit_CircuitPython_BMP280) driver
 
