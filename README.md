@@ -13,7 +13,13 @@ The service definition was developed and tested for a weather station with the e
 * WeeWX 5.3.1 
 
 # Connecting the BMP and enabling I2C and enabling the BMP280 hardware
-The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometric Pressure & Altitude Sensor - STEMMA QT](https://www.adafruit.com/product/2651). The software driver that Adafruit supplies to support this board will be discussed in the next section. First, you need to connect the board to the Pi's [general-purpose input/output (GPIO)](https://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins/) header, load the driver for the GPIO, and test that this physical connection is working. 
+The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometric Pressure & Altitude Sensor - STEMMA QT](https://www.adafruit.com/product/2651). The software driver that Adafruit supplies to support this board will be discussed in the next section. First, you need to connect the board to the Pi's [general-purpose input/output (GPIO)](https://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins/) header, load the driver for the GPIO, and test that this physical connection is working. Complete the following steps.
+<ol>
+  <li>Solder connector pins to the sensor board.To DO -- photo fro tutorial </li>
+  <li>Connect the leads between the sensor board and the GPIO header. I recommend using a ribbon of 1/10-inch female-to-female connectors [like this one from Amazon](https://www.amazon.com/Antrader-Breadboard-Dupont-Arduino-Raspberry/dp/B07RXK9SLW). For information about the pinouts and required connections, follow the [Adafruit assembly tutorial](https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout/assembly). TO DO -- pinout results from my assembly.</li> 
+  <li>Install the I2C (???) driver.</li>
+  <li>Test </li>
+</ol> 
 
 The [Adafruit_CircuitPython_BMP280](https://github.com/adafruit/Adafruit_CircuitPython_BMP280) driver
 
