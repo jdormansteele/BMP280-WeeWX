@@ -18,26 +18,30 @@ The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometri
   <li>Adafruit includes a strip of header pins with its sensor board, pictured below. <image src="[https://cdn-learn.adafruit.com/assets/assets/000/026/855/large1024/sensors_2651_kit_ORIG.jpg](https://cdn-learn.adafruit.com/assets/assets/000/093/021/original/adafruit_products_BMP280_top_header.jpg)"> Solder these to the board as shown in the related [tutorial](https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout/assembly).</li>    
   <li>Connect the leads between the sensor board and the GPIO header. I recommend using a ribbon of 1/10-inch female-to-female connectors [like this one from Amazon](https://www.amazon.com/Antrader-Breadboard-Dupont-Arduino-Raspberry/dp/B07RXK9SLW). The diagram below shows the pinouts for the the Raspberry Pi GPIO header. <image src="https://oneeyedman.net/images/pi-gpio-pinout.png"> The relevant pins for this application are 1, 3, 5, and 9. Connect them to the BMP280 board as shown in this table:
     <table>
-      <header>
-      <td>GPIO</td>
-      <td>BMP280</td>      
-      </header>
-      <tr>
-      <td>3V3 power</td>
-      <td>3Vo</td>
-      </tr>
-      <tr>
-      <td>GPIO 2 (SDA)</td>
-      <td>SDI</td>
-      </tr>
-      <tr>
-      <td>GPIO 3 (SCL)</td>
-      <td>SCK</td>
-      </tr>
-      <tr>
-      <td>Ground</td>
-      <td>Ground</td>
-      </tr>
+      <thead>
+        <tr>
+         <th>**GPIO**</th>
+         <th>**BMP280**</th>      
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(Pin 1) 3V3 power</td>
+          <td>3Vo</td>
+        </tr>
+        <tr>
+          <td>(Pin 3) GPIO 2 (SDA)</td>
+          <td>SDI</td>
+        </tr>
+        <tr>
+          <td>(Pin 5) GPIO 3 (SCL)</td>
+         <td>SCK</td>
+        </tr>
+        <tr>
+          <td>(Pin 9) Ground</td>
+          <td>Ground</td>
+        </tr>
+      </tbody>
     </table>
     For information about the pinouts and required connections, follow the [Adafruit assembly tutorial](https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout/assembly). TO DO -- pinout results from my assembly.</li> 
   <li>Install the I2C (???) driver. TO DO</li>
