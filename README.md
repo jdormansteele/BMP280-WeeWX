@@ -45,11 +45,7 @@ The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometri
     </table>
     See also the assembly instructions in the Adafruit <a href="https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout/assembly">tutorial</a>.</li> 
   <li>Install the I2C driver. On my Debian system, this meant installing three packages:
-    <ul>
-      <li>i2c-tools</li>
-      <li>libi2c0</li>
-      <li>python3-smbus</li>
-    </ul>
+<pre># apt update && apt install i2c-tools libi2c0 python3-smbus</pre>
   </li>
   <li>Set I2C device permissions. After an initial permission failure I temporarily fixed the problem by running 
     <pre># chmod 666 /dev/i2c-*</pre> as root. This did not persist through reboot. The permanent fix was to add the weewx user to the i2c group by doing 
@@ -67,7 +63,7 @@ The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometri
 50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 70: -- -- -- -- -- -- -- 77</pre>
-The result shown indicates that the BMP280 is detected as device 0x77.
+The result indicates that the BMP280 is detected as device 0x77.
   
   </li>
 </ol> 
