@@ -91,7 +91,7 @@ The [Adafruit_CircuitPython_BMP280](https://github.com/adafruit/Adafruit_Circuit
   <pre># journalctl -f</pre></li>
   <li>In another terminal, as root, restart weewx.
   <pre># systemctl restart WeeWX</pre></li>
-  <li>Observe the logs as WeeWX starts. If there is a gross error (a typo usually, or an incorrect path or permission), there will be plenty of error output for you to parse. If WeeWX starts normally, you should soon begin to see BMP280 output after a minute or so.
+  <li>Observe the logs as WeeWX starts. If there is a gross error (a typo usually, or an incorrect path or permission), there will be plenty of error output for you to parse. If WeeWX starts normally, you should begin to see BMP280 output after a minute or so.
 <pre>Apr 17 11:47:41 HAL9000 weewxd.py[799]: BMP280 service: found temperature value of 43.3427734375 °C
 Apr 17 11:47:41 HAL9000 weewxd.py[799]: BMP280 service: found pressure value of 1023.7094612233938 hPa
 Apr 17 11:47:41 HAL9000 weewxd.py[799]: BMP280 service: found altitude value of  -38.23529517151786 meters
