@@ -19,8 +19,8 @@ The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometri
   <li>Connect the leads between the sensor board and the GPIO header. I recommend using a ribbon of 1/10-inch female-to-female connectors [like this one from Amazon](https://www.amazon.com/Antrader-Breadboard-Dupont-Arduino-Raspberry/dp/B07RXK9SLW). The diagram below shows the pinouts for the the Raspberry Pi GPIO header. <image src="https://oneeyedman.net/images/pi-gpio-pinout.png"> The relevant pins for this application are 1, 3, 5, and 9. Connect them to the BMP280 board as shown in this table:
     <table>
       <header>
-      <td>**GPIO**</td>
-      <td>**BMP280**</td>      
+      <td>GPIO</td>
+      <td>BMP280</td>      
       </header>
       <tr>
       <td>3V3 power</td>
