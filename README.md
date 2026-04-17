@@ -20,8 +20,8 @@ The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometri
     <table>
       <thead>
         <tr>
-         <th>**GPIO**</th>
-         <th>**BMP280**</th>      
+         <th>GPIO header</th>
+         <th>BMP280 board</th>      
         </tr>
       </thead>
       <tbody>
@@ -43,7 +43,7 @@ The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometri
         </tr>
       </tbody>
     </table>
-    For information about the pinouts and required connections, follow the [Adafruit assembly tutorial](https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout/assembly). TO DO -- pinout results from my assembly.</li> 
+    See also the [Adafruit assembly tutorial](https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout/assembly).</li> 
   <li>Install the I2C (???) driver. TO DO</li>
   <li>Set I2C device permissions. TO DO</li>
   <li>Test. TO DO</li>
