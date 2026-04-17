@@ -74,7 +74,7 @@ The [Adafruit_CircuitPython_BMP280](https://github.com/adafruit/Adafruit_Circuit
 
 ## Install and configure the BMP280-WeeWX service definition
 <ol>
-<li>Copy to file. TO DO</li>
+<li>Copy the file <a href="https://github.com/jdormansteele/BMP280-WeeWX/blob/main/BMP280_service.py">BMP280_service.py</a> from this project to youre WeeWX user directory. This directory is /etc/weewx/bin/user on my Debian system, where I used apt to install WeeWX. This is also where the WeeWX project puts it by <a href="https://www.weewx.com/docs/5.1/usersguide/where/">default</a>. Be sure that the permissions/ownerships are readable by WeeWX. My WeeWX files are all owned by user weewx.</li>
 <li>Configure weewx.conf. TO DO</li>
 </ol>
 
@@ -90,5 +90,6 @@ This software is indebted to the following prior work.
 * The [weewx_pi_sensors](https://github.com/eyesnz/weewx_pi_sensors) project by [eyesnz](https://github.com/eyesnz).
 * The [Adafruit BMP280 Barometric Pressure + Temperature Sensor Breakout](https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout) tutorial and associated [driver](https://pypi.org/project/adafruit-circuitpython-bmp280/).
 * In the WeeWX developer documentation, the section [Customizing the WeeWX service engine: Adding a second data source](https://weewx.com/docs/4.10/customizing.htm#Adding_2nd_source).
+* GPIO diagram from https://www.seeedstudio.com/blog/2020/02/19/how-to-use-raspberry-pi-gpio-pins-python-tutorial/.
 
 
