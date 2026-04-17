@@ -73,7 +73,8 @@ The result shown indicates that the BMP280 is detected as device 0x77.
 </ol> 
 
 ## Install the driver for the sensor board
-The [Adafruit_CircuitPython_BMP280](https://github.com/adafruit/Adafruit_CircuitPython_BMP280) driver TO DO
+The [Adafruit_CircuitPython_BMP280](https://github.com/adafruit/Adafruit_CircuitPython_BMP280) driver can be downloaded directly from the GitHub site, but I couldn't get it working via that route. Instead I installed the driver and its dependencies with pip. That meant getting past the warning that pip packages might break my managed Python setup, contribute to global warming, and bring on a third Trump administration. I calculated that since this is a single-use Raspberry Pi system, I could risk those outcomes. If you, too, are brave enough, and you are root, install the driver as follows.
+<pre># pip3 install adafruit-circuitpython-bmp280 --break-system-packages</pre>
 
 ## Install and configure the BMP280-WeeWX service definition
 <ol>
