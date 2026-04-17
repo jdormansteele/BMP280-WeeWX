@@ -16,7 +16,7 @@ The service definition was developed and tested for a weather station with the e
 The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometric Pressure & Altitude Sensor - STEMMA QT](https://www.adafruit.com/product/2651). It needs to be wired to the Pi's [general-purpose input/output (GPIO)](https://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins/) header, and then the [I2C bus](https://en.wikipedia.org/wiki/I2C) must be enabled in software and tested. Complete the following steps.
 <ol>
   <li>Adafruit includes a strip of header pins with its sensor board, pictured below. <image src="https://cdn-learn.adafruit.com/assets/assets/000/093/021/original/adafruit_products_BMP280_top_header.jpg"> Solder these to the board as shown in the related [tutorial](https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout/assembly).</li>    
-  <li>Connect the leads between the sensor board and the GPIO header. I recommend using a ribbon of 1/10-inch female-to-female connectors [like this one from Amazon](https://www.amazon.com/Antrader-Breadboard-Dupont-Arduino-Raspberry/dp/B07RXK9SLW). The diagram below shows the pinouts for the the Raspberry Pi GPIO header. <image src="https://oneeyedman.net/images/pi-gpio-pinout.png"> The relevant pins for this application are 1, 3, 5, and 9. Connect them to the BMP280 board as shown in this table:
+  <li>Connect the leads between the sensor board and the GPIO header. I recommend using a ribbon of 1/10-inch female-to-female connector cables [like this one from Amazon](https://www.amazon.com/Antrader-Breadboard-Dupont-Arduino-Raspberry/dp/B07RXK9SLW). The diagram below shows the pinouts for the the Raspberry Pi GPIO header. <image src="https://oneeyedman.net/images/pi-gpio-pinout.png"> The relevant pins for this application are 1, 3, 5, and 9. Connect them to the BMP280 board as shown in this table:
     <table>
       <thead>
         <tr>
@@ -45,14 +45,31 @@ The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometri
     </table>
     See also the [Adafruit assembly tutorial](https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout/assembly).</li> 
   <li>Install the I2C driver. On my Debian system, this meant installing three packages:
-  <ul>
-    <li>i2c-tools</li>
-    <li>libi2c0</li>
-    <li>python3-smbus</li>
-  </ul>
+    <ul>
+      <li>i2c-tools</li>
+      <li>libi2c0</li>
+      <li>python3-smbus</li>
+    </ul>
   </li>
-  <li>Set I2C device permissions. TO DO</li>
-  <li>Test. TO DO</li>
+  <li>Set I2C device permissions. After an initial permission failure I temporarily fixed the problem by running 
+    <pre># chmod 666 /dev/i2c-*</pre> as root. This did not persist through reboot. The permanent fix was to add the weewx user to the i2c group by doing 
+    <pre># groupmod -U weewx -a i2c</pre> 
+    as root and then rebooting.
+  </li>
+  <li>Confirm that the I2C interface works as follows.
+  <pre>$ i2cdetect -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- 77</pre>
+The result shown indicates that the BMP280 is detected as device 0x77.
+  
+  </li>
 </ol> 
 
 ## Install the driver for the sensor board
