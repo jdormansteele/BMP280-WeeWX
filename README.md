@@ -46,7 +46,7 @@ The BMP280 sensor board that I used is the [Adafruit BMP280 I2C or SPI Barometri
     See also the [Adafruit assembly tutorial](https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout/assembly).</li> 
   <li>Install the I2C driver. On my Debian system, this meant installing three packages:
   <ul>
-    <li><i2c-tools/li>
+    <li>i2c-tools</li>
     <li>libi2c0</li>
     <li>python3-smbus</li>
   </ul>
